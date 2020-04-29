@@ -298,6 +298,7 @@ def update_line_plot(selected_countries):
 
 # -------------------------------------------------------------------------------------------------
 
+server = app.server
 
 if __name__ == '__main__':
     app.run_server(debug=True)
