@@ -17,7 +17,8 @@ setup(
         'pandas',
         'numpy',
         'dash',
-        'plotly',
+        'dash_bootstrap_components',
+        'kaggle'
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
