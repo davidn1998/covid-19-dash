@@ -21,7 +21,7 @@ import plotly.express as px
 
 # Download dataset as zip
 print('Beggining download of kaggle dataset')
-subprocess.call('kaggle datasets download sudalairajkumar/novel-corona-virus-2019-dataset')
+subprocess.run('kaggle datasets download sudalairajkumar/novel-corona-virus-2019-dataset')
 
 # Name of zip folder and file to extact
 zip_name = 'novel-corona-virus-2019-dataset.zip'
