@@ -1,7 +1,7 @@
 # Import web scraping
+import subprocess
 import json
 import requests
-import os
 from zipfile import ZipFile
 # Import Data packages
 import pandas as pd
@@ -20,8 +20,8 @@ import plotly.express as px
 # -------------------------------------------------------------------------------------------------
 
 # Download dataset as zip
-os.system(
-    'cmd /c "kaggle datasets download sudalairajkumar/novel-corona-virus-2019-dataset"')
+print('Beggining download of kaggle dataset')
+subprocess.call('kaggle datasets download sudalairajkumar/novel-corona-virus-2019-dataset')
 
 # Name of zip folder and file to extact
 zip_name = 'novel-corona-virus-2019-dataset.zip'
@@ -34,9 +34,6 @@ with ZipFile(zip_name, 'r') as zip:
     print('Extacting {file_name}...')
     zip.extract(file_name)
     print('Done!')
-
-# Remove zip file
-os.remove(zip_name)
 
 # Read Data
 all_data = pd.read_csv(file_name)
